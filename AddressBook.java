@@ -8,6 +8,7 @@ class AddressBook
 	{
 		System.out.println("Welcome to Address Book");
 		Data d =new Data();
+		DataNew DN=new DataNew();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter first Name");
 		d.firstName =sc.next();
@@ -23,7 +24,23 @@ class AddressBook
 		d.city = sc.next();
 		System.out.println("enter state");
 		d.state = sc.next();
+		System.out.println("enter  new person Name");
+		DN.NewPerson_firstName =sc.next();
+		System.out.println("enter  new person lastname");
+		DN.NewPerson_lastName =sc.next();
+		System.out.println("enter  new person address");
+		DN.NewPerson_address =sc.next();
+		System.out.println("enter  new person email");
+		DN.NewPerson_email =sc.next();
+		System.out.println("enter  new person zip");
+		DN.NewPerson_zip =sc.next();
+		System.out.println("enter  new person city");
+		DN.NewPerson_city =sc.next();
+		System.out.println("enter  new person state");
+		DN.NewPerson_state =sc.next();
 		d.readData(d);
+		DN.readDataNew(DN);
+		
 	}
 
 }
@@ -45,5 +62,19 @@ class Data
     }
 }
 
-
+class DataNew
+{
+	String NewPerson_firstName;
+	String NewPerson_lastName;
+    String NewPerson_address;
+    String NewPerson_email;
+    String NewPerson_zip;
+    String NewPerson_city;
+    String NewPerson_state;
+	public static void readDataNew(DataNew DN)
+	{
+		
+	}
+}	
+	
 
