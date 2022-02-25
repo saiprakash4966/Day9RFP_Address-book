@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 class AddressBook
 {
-	public static void main(String[]args) 
+	public static void main(String[]args)
 	{
+		
 		System.out.println("Welcome to Address Book");
 		Data d =new Data();
 		DataNew DN=new DataNew();
@@ -40,10 +41,13 @@ class AddressBook
 		DN.NewPerson_state =sc.next();
 		d.readData(d);
 		DN.readDataNew(DN);
+		DN.editUser(DN);
+		DN.edit(DN);
+		}
 		
 	}
 
-}
+
 class Data
 {
     String firstName;
@@ -71,10 +75,36 @@ class DataNew
     String NewPerson_zip;
     String NewPerson_city;
     String NewPerson_state;
+    
 	public static void readDataNew(DataNew DN)
 	{
 		
 	}
-}	
+	public void editUser(DataNew DN) 
+	{
+		
+		System.out.println(" Edit New person details");
+		
+     }
+	public void edit(DataNew DN) {
+		Scanner sc1=new Scanner(System.in);
+		System.out.println("Edit firstName :");
+		DN.NewPerson_firstName=sc1.nextLine();
+		System.out.println(" Edit lastName");
+		DN.NewPerson_lastName=sc1.nextLine();
+		System.out.println(" Edit Address");
+		DN.NewPerson_address=sc1.nextLine();
+		System.out.println(" Edit email");
+		DN.NewPerson_email=sc1.nextLine();
+		
+		System.out.println(" Edit zip");
+		DN.NewPerson_zip=sc1.nextLine();
+		System.out.println(" Edit city");
+		DN.NewPerson_city=sc1.nextLine();
+		System.out.println(" Edit State");
+		DN.NewPerson_state=sc1.nextLine();
+		
+		
+		}
 	
-
+	}
